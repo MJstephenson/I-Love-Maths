@@ -43,9 +43,9 @@ function runGame(gameType) {
         displayAdditionQuestion(num1, num2);
     } else if (gameType === "multiply") {
         displayMultiplyQuestion(num1, num2);
-    } else if (gameType === "subtract" ) {
+    } else if (gameType === "subtract") {
         displaySubtractQuestion(num1, num2);
-    } else if (gameType === "division" ) {
+    } else if (gameType === "division") {
         displayDivisionQuestion(divnum1, num2);
     }
     
