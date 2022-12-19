@@ -37,7 +37,6 @@ function runGame(gameType) {
     // Creates two random numbers between 1 and 25
     let num1 = Math.floor(Math.random() * 25) + 1;
     let num2 = Math.floor(Math.random() * 25) + 1;
-    let divnum1 = num1 * num2;
 
     if (gameType === "addition") {
         displayAdditionQuestion(num1, num2);
@@ -46,7 +45,7 @@ function runGame(gameType) {
     } else if (gameType === "subtract") {
         displaySubtractQuestion(num1, num2);
     } else if (gameType === "division") {
-        displayDivisionQuestion(divnum1, num2);
+        displayDivisionQuestion(num1, num2);
     }
     
     else {
@@ -152,8 +151,8 @@ function displayMultiplyQuestion(operand1, operand2) {
 
 function displayDivisionQuestion(operand1, operand2) {
 
-    document.getElementById("operand1").textContent = operand1 > operand2 ? operand1 : operand2;
-    document.getElementById("operand2").textContent = operand1 > operand2 ? operand2 : operand1;
+    document.getElementById("operand1").textContent = operand1 * operand2;
+    document.getElementById("operand2").textContent = operand1;
     document.getElementById('operator').textContent = "/";
 
 }
